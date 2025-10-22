@@ -42,14 +42,16 @@
             <h3>Hello, It's Me</h3>
             <h1>Yash Bhurke</h1>
             <h3>And I'm <span class="multiple-text"></span></h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos laboriosam nam id dolores fuga eligendi dignissimos nemo?</p>
+            <p>Hi, Im Yash Bhurke, a Frontend Developer passionate about building responsive and user-friendly websites. I specialize in HTML, CSS, JavaScript, and React, and I enjoy creating interactive web applications.</p>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="#"><i class='bx bxl-facebook-square' ></i></a>
-                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://www.youtube.com/@keos37" target="_blank"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.instagram.com/not_yash.at_all/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100088482516674" target="_blank""><i class='bx bxl-facebook-square' ></i></a>
+                <a href="https://github.com/YashBhurke" target="_blank"><i class='bx bxl-github' ></i></a>
             </div>
-            <a href="" class="btn">Download CV</a>
+
+            <a href="./Project1.jpg" target="_blank" class="btn">View CV</a>
+            <a href="./Project1.jpg" download class="btn">Download CV</a>
         </div>
 
         <div class="home-img">
@@ -67,8 +69,18 @@
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Frontend Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto impedit adipisci eum saepe? Magni quisquam adipisci, aut illo, quis ea exercitationem tempore quaerat et eaque illum iste vitae quia corporis at odit voluptatem suscipit, quae reiciendis libero ipsum minus natus delectus blanditiis? Ratione maiores tenetur ad.</p>
-            <a href="#" class="btn">Read More</a>
+            <p>Hi, Im Yash Bhurke, a Frontend Developer passionate about building responsive and user-friendly websites. I specialize in HTML, CSS, JavaScript, and React, and I enjoy creating interactive web applications. <br>
+                    I have developed a personal portfolio website, a YouTube downloader app, and a 2D shooting game using Python and Pygame. I enjoy solving problems and delivering solutions that users love. <br>
+                    When Im not coding, I enjoy exploring new technologies, designing UI prototypes, and gaming. Feel free to connect with me on GitHub and LinkedIn or check out my projects below!
+            </p>
+
+            <div id="more-info" style="display: none;">
+                <p>
+                I specialize in HTML, CSS, JavaScript, and React. I have worked on projects like a portfolio website, YouTube downloader app, and a 2D shooting game using Python and Pygame. <br>
+                I enjoy exploring new technologies, UI/UX design, and gaming. I’m always eager to learn and take on new challenges.
+                </p>
+            </div>
+            <a href="#" class="btn" id="read-more-btn">Read More</a>
         </div>
     </section>
 
@@ -111,15 +123,18 @@
 
             <!-- project 1 -->
             <div class="portfolio-box">
-                <img src="./Project1.jpg" alt="">
+                <img src="./Project1.jpg" alt="Project Image">
                 <div class="portfolio-layer">
-                    <h4>Web Design</h4>
+                    <h4>Weather App</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quasi?</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                    <!-- Only the icon is clickable -->
+                    <a href="https://yashbhurke.github.io/Wheather-app/" target="_blank">
+                        <i class='bx bx-link-external'></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- project 2 -->
+            <!-- project 3 -->
              <div class="portfolio-box">
                 <img src="Project2.jpg" alt="">
                 <div class="portfolio-layer">
@@ -176,18 +191,19 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name="user_name" placeholder="Full Name" required>
+                <input type="email" name="user_email" placeholder="Email Address"required>
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="user_phone" placeholder="Mobile Number" required>
+                <input type="text"name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" name="" id="" value="Send Message" class="btn">
+
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
 
@@ -204,10 +220,13 @@
     </footer>
 
     <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- typed js -->
-     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- EmailJS SDK  -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <!-- custome js -->
     <script src="script.js"></script>

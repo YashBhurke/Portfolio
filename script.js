@@ -50,3 +50,41 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+const btn = document.getElementById('read-more-btn');
+const moreInfo = document.getElementById('more-info');
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    if (moreInfo.style.display === 'none') {
+        moreInfo.style.display = 'block';
+        btn.textContent = 'Read Less'; 
+    } else {
+        moreInfo.style.display = 'none';
+        btn.textContent = 'Read More';
+    }
+});
+
+ (function(){
+      emailjs.init("KeSuJHnN-dV2fw2hW"); // Replace with your EmailJS public key
+   })();
+
+   const form = document.getElementById('contact-form');
+
+   form.addEventListener('submit', function(e){
+       e.preventDefault(); // Prevent default form submission
+
+       emailjs.sendForm('service_oo7xfip', 'template_1pr7jcd', this)
+       .then(function(){
+           alert("Message sent successfully!");
+           form.reset(); // Clear the form
+       }, function(error){
+           alert("Oops! Something went wrong.", error);
+       });
+   });
+
+
+
+   // private key : KeSuJHnN-dV2fw2hW
+   // email id : yashrb712@gmail.com
+   // tamplate : template_1pr7jcd
